@@ -1,5 +1,6 @@
 :root {
     --color-font: #4d4e53;
+    --color-code: #F7F7F7;
     --font: 'Open Sans', sans-serif;
 }
 
@@ -14,10 +15,107 @@
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     background: white;
     font-size: 16px;
     font-family: var(--font);
+    color: var(--color-font);
+    display: flex;
+    width: 100%;
+}
+
+nav {
+    width: 300px;
+    border-right: 3px solid rgba(128,128,128,.7);
+    height: 100vh;
+    position: fixed;
+    overflow: auto;
+}
+
+nav header {
+    font-size: 28px;
+    color: black;
+    padding: 15px;
+}
+
+nav ul li {
+    border-top: 1px solid black;
+    padding: 12px 15px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-font);
+    font-weight: 400;
+}
+
+main {
+    margin-left: 19rem;
+    width: 70%;
+    padding: 30px;
+}
+
+main .main-section {
+    margin-bottom: 3rem;
+}
+
+main .main-section header {
+    font-size: 28px;
+    color: black;
+}
+
+main .main-section article {
+    margin: 1.5rem 0 0 1.2rem;
+    text-align: justify;
+    line-height: 1.5rem;
+    font-size: 15.3px;
+}
+
+main .main-section article p {
+    margin-bottom: 1rem;
+}
+
+main .main-section article code {
+    background-color: var(--color-code);
+    padding: 20px;
+    border-radius: 5px;
+    display: block;
+    font-size: 12.48px;
+    margin: 1rem 0 1rem .5rem;
+}
+
+main .main-section article ul {
+    margin: 1.5rem 0 0 4rem;
+}
+
+main .main-section article ul ul {
+    list-style-type: circle;
+    margin-left: 2rem;
+}
+
+main .main-section article ul li {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 815px) {
+    body {
+        flex-direction: column;
+    }
+
+    nav {
+        position: relative;
+        height: 400px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    main {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
