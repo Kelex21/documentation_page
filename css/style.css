@@ -1,0 +1,23 @@
+:root {
+    --color-font: #4d4e53;
+    --font: 'Open Sans', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    font-size: 16px;
+    font-family: var(--font);
+}
